@@ -36,7 +36,17 @@ The rules are constants at the top of `app.js`: `LIKES_PER_ROUND`, `MAX_STAGE` a
 
 ## Photo credits
 
-The sample photos are loaded from [LoremFlickr](https://loremflickr.com), which serves Creative Commons photos from Flickr. Each photo shows its licence and photographer in the corner. If a photo fails to load, the app shows a coloured tile instead.
+The sample photos are stand-ins from [Unsplash](https://unsplash.com), used under the [Unsplash License](https://unsplash.com/license). If a photo fails to load, the app shows a coloured tile instead.
+
+- sunset: https://unsplash.com/photos/vehicle-on-street-during-golden-hour-m3SOfk_S79o
+- desk, 3am: https://unsplash.com/photos/black-computer-monitor-turned-on-beside-black-computer-keyboard-rMyel7micAg
+- team: https://unsplash.com/photos/women-playing-volleyball-inside-court-aZVpxRydiJk
+- mirror: https://unsplash.com/photos/a-person-taking-a-picture-of-herself-in-a-mirror-_EvhuH9V6jA
+- kitchen: https://unsplash.com/photos/grandmother-and-granddaughter-preparing-food-in-kitchen-mS3S7HQnHPo
+- brunch: https://unsplash.com/photos/a-group-of-women-sitting-around-a-table-JCwOW4oXENc
+- concert: https://unsplash.com/photos/stage-light-front-of-audience-NYrVisodQ2M
+- lake: https://unsplash.com/photos/body-of-water-near-mountain-during-daytime-1HMl4gY9bl4
+- notes: https://unsplash.com/photos/pen-on-white-lined-paper-selective-focus-photography-CKlHKtCJZKk
 
 ## Files
 
