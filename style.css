@@ -80,6 +80,8 @@ button:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
   font-weight: 600;
 }
 
+img.photo { display: block; padding: 0; }
+
 .body { padding: 12px; }
 .caption { margin: 0 0 8px; min-height: 3em; transition: color 0.4s ease; }
 .tags { color: var(--accent); font-size: 0.9rem; margin: 0 0 10px; }

@@ -34,6 +34,10 @@ Edit `data/posts.js`. Each post has:
 
 The rules are constants at the top of `app.js`: `LIKES_PER_ROUND`, `MAX_STAGE` and `BRAND_THRESHOLD`.
 
+## Photo credits
+
+The sample photos are loaded from [LoremFlickr](https://loremflickr.com), which serves Creative Commons photos from Flickr. Each photo shows its licence and photographer in the corner. If a photo fails to load, the app shows a coloured tile instead.
+
 ## Files
 
 ```

@@ -49,8 +49,15 @@ function photoNode(post, index) {
     img.className = "photo";
     img.src = post.image;
     img.alt = post.short;
+    img.loading = "lazy";
+    // If the photo fails to load, fall back to a coloured tile.
+    img.addEventListener("error", () => img.replaceWith(tileNode(post, index)), { once: true });
     return img;
   }
+  return tileNode(post, index);
+}
+
+function tileNode(post, index) {
   const tile = document.createElement("div");
   tile.className = "photo";
   const c = PALETTE[index % PALETTE.length];
