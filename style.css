@@ -1,0 +1,115 @@
+:root {
+  --bg: #faf8f5;
+  --card: #ffffff;
+  --text: #1f1d1a;
+  --muted: #6b665f;
+  --accent: #c2410c;
+  --border: #e7e2da;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151412;
+    --card: #1f1d1a;
+    --text: #f2efe9;
+    --muted: #a39d94;
+    --accent: #fb923c;
+    --border: #34312c;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+header, .brand, .feed, footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header { padding-top: 32px; }
+h1 { margin: 0 0 8px; font-size: 2rem; letter-spacing: -0.02em; }
+.intro { color: var(--muted); max-width: 60ch; margin: 0 0 16px; }
+
+.status { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.95rem; margin-bottom: 12px; }
+.controls { display: flex; gap: 8px; margin-bottom: 24px; }
+
+button {
+  font: inherit;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button.secondary { background: transparent; color: var(--accent); }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+button:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+
+.feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  padding-bottom: 40px;
+}
+
+.post {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: opacity 0.6s ease, filter 0.6s ease, transform 0.3s ease;
+}
+.post.liked { border-color: var(--accent); }
+
+.photo {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.body { padding: 12px; }
+.caption { margin: 0 0 8px; min-height: 3em; transition: color 0.4s ease; }
+.tags { color: var(--accent); font-size: 0.9rem; margin: 0 0 10px; }
+
+.like {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+  padding: 6px 12px;
+}
+.like[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* Flattening stages */
+.post[data-stage="1"] .caption { color: var(--muted); }
+.post[data-stage="2"] .caption { display: none; }
+.post[data-stage="3"] { opacity: 0.18; filter: grayscale(1); }
+.post[data-stage="3"] .like { visibility: hidden; }
+
+.brand {
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+.brand h2 { margin: 0 0 8px; }
+.brand-tags { font-size: 1.4rem; color: var(--accent); margin: 0 0 8px; }
+.brand-note { color: var(--muted); margin: 0; }
+
+footer { color: var(--muted); font-size: 0.85rem; padding-bottom: 32px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .post, .caption { transition: none; }
+}

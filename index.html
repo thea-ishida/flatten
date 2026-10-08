@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flatten</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Flatten</h1>
+    <p class="intro">
+      You are my audience. Each round you can like up to <strong>3</strong> posts.
+      Posts you skip lose their story: first the caption shrinks, then only hashtags remain, then they fade.
+      Keep going and see what is left of me.
+    </p>
+    <div class="status" aria-live="polite">
+      <span>Round <strong id="round">1</strong></span>
+      <span>Likes left <strong id="likes-left">3</strong></span>
+      <span>Still visible <strong id="visible">9</strong></span>
+    </div>
+    <div class="controls">
+      <button id="next" type="button">Next round</button>
+      <button id="restore" type="button" class="secondary">Restore</button>
+    </div>
+  </header>
+
+  <section id="brand" class="brand" hidden aria-live="polite">
+    <h2>This is the version of me your likes made.</h2>
+    <p id="brand-tags" class="brand-tags"></p>
+    <p class="brand-note">Everything else is still here, faded. Press <strong>Restore</strong> to bring the whole person back.</p>
+  </section>
+
+  <main id="feed" class="feed"></main>
+
+  <footer>
+    <p>A creative sprint for DIGIHUM 2120: Digital Creativity, Western University.</p>
+  </footer>
+
+  <script src="data/posts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
